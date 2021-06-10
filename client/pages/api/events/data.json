@@ -23,6 +23,30 @@
       "time": "8:00 AM EST",
       "description": "classics and new school, foriegn and domestic",
       "image": "/images/carshow_1.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Chess Tournament",
+      "slug": "chess-tournament",
+      "venue": "Downton",
+      "address": "100 Pearl Street, Metuchen, NJ, 08840",
+      "members": "local biz",
+      "date": "July 29, 2021",
+      "time": "10:00 AM EST",
+      "description": "battle for supremecy",
+      "image": "/images/chess_1.jpg"
+    },
+    {
+      "id": "4",
+      "name": "B-Boy Battle",
+      "slug": "bboy-battle",
+      "venue": "Downton",
+      "address": "100 Main Street, Metuchen, NJ, 08840",
+      "members": "local biz",
+      "date": "August 5, 2021",
+      "time": "8:00 PM EST",
+      "description": "battle for supremecy",
+      "image": "/images/bboybattle_1.jpg"
     }
   ]
 }
