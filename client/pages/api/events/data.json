@@ -1,0 +1,28 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "name": "BBQ Festival",
+      "slug": "bbq-festival",
+      "venue": "Downtown",
+      "address": "100 Main Street, Metuchen, NJ, 08840",
+      "members": "local restaurants",
+      "date": "June 29, 2021",
+      "time": "1:00 PM EST",
+      "description": "beef, chicken, pork, and fish",
+      "image": "/images/bbq_1.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Car Show",
+      "slug": "car-show",
+      "venue": "Downton",
+      "address": "100 Main Street, Metuchen, NJ, 08840",
+      "members": "local biz",
+      "date": "July 2, 2021",
+      "time": "8:00 AM EST",
+      "description": "classics and new school, foriegn and domestic",
+      "image": "/images/carshow_1.jpg"
+    }
+  ]
+}

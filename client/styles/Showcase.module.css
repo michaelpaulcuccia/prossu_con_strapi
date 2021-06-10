@@ -1,7 +1,7 @@
 .showcase {
     height: 320px;
     width: 100%;
-    background: #000 url('../public/images/mtch_night.png') no-repeat center center;
+    background: #d2b48c url('../public/images/mtch_art.png') no-repeat center center;
     color: #fff;
     position: relative;
     display: flex;
@@ -18,7 +18,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    /*background-color: rgba(0, 0, 0, 0.4);*/
   }
   
   .showcase * {
