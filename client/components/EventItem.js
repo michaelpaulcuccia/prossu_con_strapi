@@ -8,13 +8,13 @@ export default function EventItem({ evt }) {
         <div className={styles.event}>
             <div className={styles.img}>
                 <Image 
-                src={evt.image ? evt.image : '/images/not_available.png'} 
+                src={evt.image ? evt.image.formats.thumbnail.url : '/images/not_available.png'} 
                 width={150}
                 height={125}
                 />
             </div>
             <div className={styles.info}>
-                <span>{evt.date} at {evt.time}</span>
+                <span>{new Date(evt.date).toLocaleDateString('en-US')} at {evt.time}</span>
                 <h3>{evt.name}</h3>
             </div>
             <div className={styles.link}>
