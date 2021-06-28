@@ -34,8 +34,6 @@ export default function Layout({title, keywords, description, children}) {
     )
 }
 
-// TO DO: update
-// Second Check
 // Third Check
 
 Layout.defaultProps = {
