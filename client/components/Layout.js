@@ -34,6 +34,8 @@ export default function Layout({title, keywords, description, children}) {
     )
 }
 
+// TO DO: update
+
 Layout.defaultProps = {
     title: 'metuchenLOCALE',
     description: 'local underground events and news',
