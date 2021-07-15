@@ -1,7 +1,21 @@
 .showcase {
-    height: 320px;
+    /* height: 320px; */
     width: 100%;
-    background: #d2b48c url('../public/images/mtch_art.png') no-repeat center center;
+    
+    /*start*/
+    /*height: 320px;
+    background: #d2b48c url('../public/images/mtch_art.png') no-repeat center center; */
+    /*end*/
+
+    /*start*/
+    margin-top: 30px;
+    height: 300px;
+    background: url('../public/images/mtch_brainyboro.png');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: contain;
+    /*end*/
+
     color: #fff;
     position: relative;
     display: flex;
