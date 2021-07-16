@@ -45,20 +45,20 @@ export default function EventPage({ evt }) {
                     </a>
                </div>
            </div>
-           <span>
+           <span className={styles.content}>
                {new Date(evt.date).toLocaleDateString('en-US')} at {evt.time}
            </span>
-           <h1>{evt.name}</h1>
+           <h1 className={styles.content}>{evt.name}</h1>
            <ToastContainer />
            {evt.image && (
                <div className={styles.image}>
                    <Image src={evt.image.formats.medium.url} width={600} height={600}/>
                </div>
            )}
-           <h3>Sponsored by {evt.members}</h3>
-           <h3>Description: {evt.description}</h3>
-           <h3>Venue: {evt.venue}</h3>
-           <p>{evt.address}</p>
+           <h3 className={styles.content}>Sponsored by {evt.members}</h3>
+           <h3 className={styles.content}>Description: {evt.description}</h3>
+           <h3 className={styles.content}>Venue: {evt.venue}</h3>
+           <p className={styles.content}>{evt.address}</p>
            <Link href='/events'>
                <a className={styles.back}>
                   {'<'} Go back

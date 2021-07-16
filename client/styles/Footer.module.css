@@ -1,9 +1,18 @@
 .footer {
     margin: 100px 0 40px;
     text-align: center;    
+    color: #551A8B;
   }
   
   .footer p {
     margin: 5px 0;
     
+  }
+
+  .footer a {
+    color: #551A8B;
+  }
+
+  .footer a:hover {
+    color: steelblue;
   }

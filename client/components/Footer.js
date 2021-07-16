@@ -7,7 +7,7 @@ export default function Footer(props) {
       <p>Copyright &copy; metuchenLOCALE 2021</p>
       {props.currentUrl !== "/about" && (
         <p>
-          <Link href="/about">About Us</Link>
+          <Link href="/about"><a>About Us</a></Link>
         </p>
       )}
     </footer>
