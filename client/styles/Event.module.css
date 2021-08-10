@@ -20,26 +20,28 @@
     right: 30px;
     top: 0;
   }
+
+  .edit {
+    color: #6c5ce7;
+  }
   
   .delete {
     margin-left: 20px;
-    color: red;
+    color: #d63031;
   }
 
   .delete:hover {
-    color: #ff6b59;
+    opacity: 0.8;
   }
   
   .back {
     display: block;
     margin-top: 40px;
-    color: #551A8B;
+    color: #6c5ce7;
   }
 
   .back:hover {
-    color: steelblue;
+    opacity: 0.9;
   }
 
-  .content {
-    color: #551A8B;
-  }
+  

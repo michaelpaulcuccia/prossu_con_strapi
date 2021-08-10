@@ -2,12 +2,11 @@ import Layout from "@/components/Layout";
 import { API_URL } from "@/config/index";
 import EventItem from "@/components/EventItem";
 import Link from "next/link";
-import styles from "@/styles/Index.module.css";
 
 export default function HomePage({ events }) {
   return (
     <Layout>
-      <h1 className={styles.upcoming}>Upcoming</h1>
+      <h1>Upcoming</h1>
       {events.length === 0 && <h3>No Events</h3>}
       {events.map((evt) => (
         <EventItem key={evt.id} evt={evt} />

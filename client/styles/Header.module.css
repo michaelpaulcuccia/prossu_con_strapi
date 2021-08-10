@@ -9,14 +9,9 @@
   }
   
   .header a {
-    color: #551A8B;
     margin-right: 20px;
   }
-  
-  .header a:hover {
-    color: steelblue;
-  }
-  
+    
   .header ul {
     display: flex;
     align-items: center;
@@ -25,14 +20,9 @@
   }
   
   .logo {
-    color: #551A8B;
     font-size: 20px;
   }
-  
-  .logo a {
-    color: #551A8B;
-  }
-  
+    
   @media (max-width: 768px) {
     .header {
       flex-direction: column;

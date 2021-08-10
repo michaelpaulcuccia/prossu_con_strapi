@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
 
+/* 
+  PRIMARY TEXT: #2d3436;
+  a HOVER: #636e72;
+  BTN-PRIMARY: #6c5ce7;
+    HOVER: 0.9 Opacity
+  BTN-SECONDARY: #d63031;
+    HOVER: 0.8 Opacity
+*/
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,11 +19,16 @@ html,
 body {
   font-family: 'Comfortaa', cursive;
   line-height: 1.8;
+  color: #2d3436;
 }
 
 a {
   text-decoration: none;
-  color: steelblue;
+  color: #2d3436;
+}
+
+a:hover{
+  color: #636e72;
 }
 
 p {
@@ -27,10 +41,8 @@ h1 {
 
 .btn {
   display: inline-block;
-  /*background: red;*/
-  background: #d2b48c;
-  /*color: #fff*/
-  color: #000000;
+  background: #6c5ce7;
+  color: #fff;
   padding: 10px 20px;
   cursor: pointer;
   border: 0;
@@ -44,8 +56,7 @@ h1 {
 .btn-secondary {
   font: inherit;
   font-size: 13px;
-  /*background: #000;*/
-  background: #551A8B;
+  background: #d63031;
   color: #fff !important;
   border: 0;
   border-radius: 5px;
@@ -67,8 +78,3 @@ h1 {
 .btn-icon svg {
   margin-right: 5px;
 }
-
-
-/*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
- /*font-family: 'Poppins', sans-serif;
-*/

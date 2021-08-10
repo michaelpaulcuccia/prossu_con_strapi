@@ -35,7 +35,7 @@ export default function EventPage({ evt }) {
            <div className={styles.event}>
                <div className={styles.controls}>
                     <Link href={`/events/edit/${evt.id}`}>
-                        <a>
+                        <a className={styles.edit}>
                             <FaPencilAlt /> Edit Event
                         </a>
                     </Link>
