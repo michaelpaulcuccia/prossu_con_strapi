@@ -22,12 +22,12 @@
   }
 
   .edit {
-    color: #6c5ce7;
+    color: var(--button-primary);
   }
   
   .delete {
     margin-left: 20px;
-    color: #d63031;
+    color: var(--button-secondary);
   }
 
   .delete:hover {
@@ -37,7 +37,7 @@
   .back {
     display: block;
     margin-top: 40px;
-    color: #6c5ce7;
+    color: var(--button-primary);
   }
 
   .back:hover {

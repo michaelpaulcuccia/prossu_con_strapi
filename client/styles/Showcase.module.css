@@ -3,11 +3,31 @@
   width: 960px;
   height: 500px;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.headline {
+  mix-blend-mode: hard-light;
+  /* mix-blend-mode: difference; */
+  color: #ffeaa7;
+  font-size: 48px;
+  padding-top: 225px;
+  letter-spacing: 3px;
+}
+
+.headline em {
+  color: var(--primary-white);
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
   .showcase {
     width: 100%;
     height: 300px;
+  }
+  .headline {
+    padding-top: 125px;
+    font-size: 36px;
   }
 }

@@ -5,11 +5,12 @@
     margin: 20px 0;
     padding: 13px;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
-    /* color: #551A8B; */
   }
   
-  .img {
-    flex: 1;
+  .image {
+    /* HEIGHT AND WIDTH NEEDS UPDATING - USE ONLY Vert Images */
+    height: 375px;
+    width: 250px;
     margin: 10px;
   }
   
@@ -21,6 +22,11 @@
     .event {
       flex-direction: column;
       text-align: center;
+    }
+
+    .image {
+      width: 150px;
+      height: 200px;
     }
   
     .info {

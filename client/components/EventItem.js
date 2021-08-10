@@ -1,12 +1,13 @@
 import Link from "next/link";
-import Image from "next/image";
+//import Image from "next/image";
 import styles from "@/styles/EventItem.module.css";
 
 export default function EventItem({ evt }) {
   return (
     <div className={styles.event}>
-      <div className={styles.img}>
-        <Image
+      {/* <div className={styles.img}> */}
+      <div>
+        {/* <Image
           src={
             evt.image
               ? evt.image.formats.small.url
@@ -14,7 +15,12 @@ export default function EventItem({ evt }) {
           }
           width={185}
           height={165}
-        />
+        /> */}
+        <img className={styles.image} src={
+              evt.image
+              ? evt.image.formats.small.url
+              : "/images/not_available.png"
+        } />
       </div>
       <div className={styles.info}>
         <span>
