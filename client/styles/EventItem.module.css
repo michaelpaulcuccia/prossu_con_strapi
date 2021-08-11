@@ -7,13 +7,12 @@
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
   }
   
-  .image {
-    /* HEIGHT AND WIDTH NEEDS UPDATING - USE ONLY Vert Images */
-    height: 375px;
-    width: 250px;
+  /* USE ONLY VERTICAL IMAGES */
+  .img {
+    flex: 1;
     margin: 10px;
   }
-  
+ 
   .info {
     flex: 2;
   }

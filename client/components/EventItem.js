@@ -1,26 +1,20 @@
 import Link from "next/link";
-//import Image from "next/image";
+import Image from "next/image";
 import styles from "@/styles/EventItem.module.css";
 
 export default function EventItem({ evt }) {
   return (
     <div className={styles.event}>
-      {/* <div className={styles.img}> */}
-      <div>
-        {/* <Image
+      <div className={styles.img}>
+        <Image
           src={
             evt.image
               ? evt.image.formats.small.url
               : "/images/not_available.png"
           }
-          width={185}
-          height={165}
-        /> */}
-        <img className={styles.image} src={
-              evt.image
-              ? evt.image.formats.small.url
-              : "/images/not_available.png"
-        } />
+          width={250}
+          height={375}
+        />
       </div>
       <div className={styles.info}>
         <span>
@@ -37,6 +31,7 @@ export default function EventItem({ evt }) {
   );
 }
 
+//Image JSON
 /*
 image: {
     id: 3,
