@@ -161,19 +161,22 @@ export default function EditEventPage({evt}) {
 
             </form>
 
-            <h2>Event Image</h2>
-            {imagePreview ? (
-                <Image src={imagePreview} height={100} width={170} />
-            ) :
+            <div>
+                <h2>Event Image</h2>
+                {imagePreview ? (
+                    <Image src={imagePreview} height={187} width={130} />
+                ) :
                 <div>
                     <p>No Image uploaded</p>
                 </div>
-            }
-            <div>
+                }
+                <div>
                 <button className='btn-secondary'>
                     <FaImage /> Set Image
                 </button>
             </div>
+            </div>
+          
         </Layout>
     )
 }
