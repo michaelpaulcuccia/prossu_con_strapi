@@ -64,6 +64,13 @@ export default function EditEventPage({evt}) {
         setValues({...values, [name]: value})
     }
 
+    const imageUploaded = async (event) => {
+        const res = await fetch(`${API_URL}/events/${evt.id}`);
+        const data = await res.json();
+        setImagePreview(data.image.formats.thumbnail.url);
+        setShowModal(false);
+    }
+
     return (
         <Layout
             title='Add New Event'
@@ -184,7 +191,10 @@ export default function EditEventPage({evt}) {
             </div>
 
             <Modal show={showModal} onClose={() => setShowModal(false)}>
-                <ImageUpload />
+                <ImageUpload 
+                    evtId={evt.id}
+                    imageUploaded={imageUploaded}
+                />
             </Modal>
           
         </Layout>
