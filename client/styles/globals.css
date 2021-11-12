@@ -64,6 +64,17 @@ h1 {
   cursor: pointer;
 }
 
+.btn-secondary-no_margins {
+  font: inherit;
+  font-size: 13px;
+  background: var(--button-secondary);
+  color: var(--primary-white) !important;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
 .btn-secondary:hover {
   opacity: 0.8;
 }
