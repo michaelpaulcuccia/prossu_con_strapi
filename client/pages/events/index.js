@@ -1,12 +1,9 @@
-import Link from 'next/link';
 import Layout from '@/components/Layout';
-import {API_URL } from '@/config/index';
+import { API_URL, PER_PAGE } from '@/config/index';
 import EventItem from '@/components/EventItem';
-const PER_PAGE = 3;
+import Pagination from '@/components/Pagination';
 
 export default function EventsPage({ events, page, total }) {
-
-  const lastPage = Math.ceil(total / PER_PAGE)
 
   return (
     <Layout>
@@ -18,16 +15,7 @@ export default function EventsPage({ events, page, total }) {
         evt={evt}
         />
       ))}
-      {page > 1 && (
-        <Link href={`/events?page=${page - 1}`}>
-          <a className='btn-secondary'>Prev</a>
-        </Link>
-      )}
-      {page < lastPage && (
-        <Link href={`/events?page=${page + 1}`}>
-          <a className='btn-secondary'>Next</a>
-        </Link>
-      )}
+    <Pagination page={page} total={total} />
     </Layout>
   )
 
@@ -53,18 +41,3 @@ export async function getServerSideProps({ query: { page =  1} }) {
   }
 
 }
-
-
-// export async function getStaticProps() {
-
-//   const res = await fetch(`${API_URL}/events?_sort=date:ASC`);
-//   const events = await res.json();
-
-//   return {
-//     props: {
-//       events
-//     },
-//     revalidate: 1
-//   }
-
-// }
