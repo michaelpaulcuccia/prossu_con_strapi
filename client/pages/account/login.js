@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import Link from 'next/link';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { FaUser } from 'react-icons/fa';
 import Layout from '@/components/Layout';
 import styles from '@/styles/AuthForm.module.css';
@@ -12,7 +13,10 @@ export default function login() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log({email, password})
+        console.log({email, password});
+        //clears form
+        setEmail('');
+        setPassword('');
     }
 
     return (
