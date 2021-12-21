@@ -16,6 +16,8 @@ export default function register() {
 
     const { register, error } = useContext(AuthContext);
 
+    useEffect(() => error && toast.error(error));
+
     const handleSubmit = (event) => {
         event.preventDefault();
         

@@ -15,7 +15,28 @@ export const AuthProvider = ({ children }) => {
 
     //Register
     const register = async (user) => {
-        console.log(user)
+
+        const res = await fetch(`${NEXT_URL}/api/register`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        });
+
+        const data = await res.json();
+        //console.log(data);
+
+        if (res.ok){
+            setUser(data.user)
+            //redirect to dashboard
+            router.push('/account/dashboard');
+        } else {
+            //from api/register.js
+            //res.status(data.statusCode).json({message: data.message[0].messages[0].message});
+            setError(data.message);
+            setError(null);
+        }
     };
 
     //Login
