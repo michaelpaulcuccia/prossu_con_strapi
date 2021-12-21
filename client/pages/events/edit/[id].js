@@ -201,13 +201,14 @@ export default function EditEventPage({evt}) {
     )
 }
 
-export async function getServerSideProps( {params: {id}, req} ) {
+export async function getServerSideProps( {params: {id}} ) {
 
     const res = await fetch(`${API_URL}/events/${id}`);
     const evt = await res.json();
 
-    //view cookie
-    console.log(req.headers.cookie)
+    //view cookie - gets parsed in api/user.js
+    //{params: {id}, req}
+    //console.log(req.headers.cookie)
 
     return {
         props: {
