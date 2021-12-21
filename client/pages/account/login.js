@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
+import AuthContext from '@/context/AuthContext';
 import Link from 'next/link';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,9 +12,11 @@ export default function login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const {login, error} = useContext(AuthContext);
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log({email, password});
+        login({ email, password })
         //clears form
         setEmail('');
         setPassword('');
