@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter} from 'next/router';
-import { FaPencilAlt, FaTimes} from 'react-icons/fa'
+//import { useRouter} from 'next/router';
+//import { FaPencilAlt, FaTimes} from 'react-icons/fa'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import Layout from '@/components/Layout';
@@ -10,30 +10,29 @@ import styles from '@/styles/Event.module.css';
 
 export default function EventPage({ evt }) {
 
-    const router = useRouter()
+    //const router = useRouter()
 
-    //console.log(evt)
+    // const deleteEvent = async (e) => {
+    //     if (confirm('Are you sure?')){
+    //         const res = await fetch(`${API_URL}/events/${evt.id}`, {
+    //             method: "DELETE"
+    //         })
 
-    const deleteEvent = async (e) => {
-        if (confirm('Are you sure?')){
-            const res = await fetch(`${API_URL}/events/${evt.id}`, {
-                method: "DELETE"
-            })
+    //         const data = await res.json()
 
-            const data = await res.json()
-
-            if (!res.ok) {
-                toast.error(data.message)
-            } else {
-                router.push('/events')
-            }
-        }
-    }
+    //         if (!res.ok) {
+    //             toast.error(data.message)
+    //         } else {
+    //             router.push('/events')
+    //         }
+    //     }
+    // }
 
     return (
         <Layout>
            <div className={styles.event}>
-               <div className={styles.controls}>
+
+               {/* <div className={styles.controls}>
                     <Link href={`/events/edit/${evt.id}`}>
                         <a className={styles.edit}>
                             <FaPencilAlt /> Edit Event
@@ -43,7 +42,8 @@ export default function EventPage({ evt }) {
                     onClick={deleteEvent}>
                         <FaTimes /> Delete Event
                     </a>
-               </div>
+               </div> */}
+
            </div>
            <span className={styles.content}>
                {new Date(evt.date).toLocaleDateString('en-US')} at {evt.time}

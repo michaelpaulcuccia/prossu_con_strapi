@@ -11,8 +11,9 @@ import Modal from '@/components/Modal';
 import ImageUpload from '@/components/ImageUpload';
 import { API_URL } from '@/config/index';
 import styles from '@/styles/Form.module.css';
+import { parseCookies } from '@/utils/index';
 
-export default function EditEventPage({evt}) {
+export default function EditEventPage({evt, token}) {
 
     const router = useRouter();
 
@@ -45,12 +46,17 @@ export default function EditEventPage({evt}) {
         const res = await fetch(`${API_URL}/events/${id}`, {
             method: "PUT",
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${token}`
             },
             body: JSON.stringify(values)
         });
 
         if (!res.ok) {
+            if (res.status === 403 || res.status === 401) {
+                toast.error('Unathorized!');
+                return
+            }
             toast.error('That did not work!')
         } else {
             const data = await res.json();
@@ -194,6 +200,7 @@ export default function EditEventPage({evt}) {
                 <ImageUpload 
                     evtId={evt.id}
                     imageUploaded={imageUploaded}
+                    token={token}
                 />
             </Modal>
           
@@ -201,18 +208,17 @@ export default function EditEventPage({evt}) {
     )
 }
 
-export async function getServerSideProps( {params: {id}} ) {
+export async function getServerSideProps( {params: {id}, req} ) {
 
     const res = await fetch(`${API_URL}/events/${id}`);
     const evt = await res.json();
 
-    //view cookie - gets parsed in api/user.js
-    //{params: {id}, req}
-    //console.log(req.headers.cookie)
+    const { token } = parseCookies(req) 
 
     return {
         props: {
-            evt
+            evt, 
+            token
         }
     }
 }
