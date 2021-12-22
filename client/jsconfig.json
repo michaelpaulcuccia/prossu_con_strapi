@@ -6,6 +6,8 @@
             "@/styles/*": ["styles/*"],
             "@/config/*": ["config/*"],
             "@/context/*": ["context/*"],
+            "@/utils/*": ["utils/*"],
+
         }
     }
 }

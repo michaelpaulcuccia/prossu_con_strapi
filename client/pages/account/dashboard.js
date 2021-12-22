@@ -1,6 +1,9 @@
-import Layout from "@/components/Layout"
+import Layout from "@/components/Layout";
+import { parseCookies } from '@/utils/index';
+import { API_URL } from "@/config/index";
 
-export default function dashboard() {
+export default function dashboard({ events }) {
+    console.log(events)
     return (
         <Layout
             title='User Dashboard'
@@ -8,4 +11,24 @@ export default function dashboard() {
             <h1>Welcome to Dashboard!</h1>    
         </Layout>
     )
+}
+
+export async function getServerSideProps({req}) {
+
+    const { token } = parseCookies(req);
+    
+    const res = await fetch(`${API_URL}/events/me`, {
+        method: 'GET',
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    })
+
+    const events = await res.json();
+
+    return {
+        props: {
+            events
+        }
+    }
 }
